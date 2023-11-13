@@ -1,0 +1,77 @@
+# Get the currently installed version of docker
+docker --version
+
+# Pull images from the docker
+docker pull <image-name>
+
+# Create a container from an image
+docker run -it -d <image-name>
+
+# Show all the running and exited containers
+docker ps -a
+
+# Access the running container
+docker exec -it <container-id> bash
+
+# Stops a running container
+docker stop <container-id>
+
+# Kills the container by stopping its execution immediately.
+docker kill <container-id>
+
+# Creates a new image of an edited container on the local system
+docker commit <container-id> <username/image-name>
+
+# Login to the docker hub repository
+docker login
+
+# Push an image to the docker hub repository
+docker push <username/image-name>
+
+# Lists all the locally stored docker images
+docker images
+
+# Delete a stopped container
+docker rm <container-id>
+
+# Delete an image from local storage
+docker rmi <image-id>
+
+# Build an image from a specified docker file
+docker build <path-to-docker-file>
+
+# List Image
+docker image ls
+
+# Remove Image
+docker image rm <image-id>
+
+# Check Docker Logs
+docker logs <container-id>
+
+# Get Info of Container
+docker inspect <container-id>
+
+# Get Info of Network
+docker network inspect <network-id>
+
+# List Network
+docker network ls
+
+# Create Network
+docker network create -d bridge my-bridge-network
+
+
+#### USING DOCKER COMPOSE ####
+
+# Compose Container Pull Image
+docker compose pull
+
+# Compose Container Up
+docker compose up -d
+
+# Run a compose container
+docker compose run --rm freqtrade download-data --days 30
+
+# Restart Compose Container
+docker compose restart
